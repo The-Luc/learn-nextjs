@@ -18,7 +18,10 @@ export default function DashboardTemplate({
       setIsLoaded(true);
     }, 300);
     
-    return () => clearTimeout(timer);
+    return () => {
+      console.log('Clearing timer'); 
+      clearTimeout(timer);
+    };
   }, []);
 
   console.log('Dashboard template');
